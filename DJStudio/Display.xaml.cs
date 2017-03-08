@@ -18,25 +18,18 @@ namespace DJStudio
     /// </summary>
     public sealed partial class Display : Page
     {
-       
 
-      
+
+
         public Display()
         {
             this.InitializeComponent();
-            //var ellipse1 = new Ellipse
-            //{
-            //    Fill = new SolidColorBrush(Windows.UI.Colors.SteelBlue),
-            //    Width = 200,
-            //    Height = 200
-            //};
-
-            //Top.Children.Add(ellipse1);
 
            
+
         }
 
-     
+
 
     }
 }

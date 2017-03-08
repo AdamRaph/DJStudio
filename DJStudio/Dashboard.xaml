@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-52,-92">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-112,-334">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -38,7 +38,7 @@
                 <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
                 <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
             </ListView>
-            <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="0,20,0,0" IsEnabled="True"/>
+            <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="15,20,15,0" IsEnabled="True"/>
             <!--Playback Controls-->
         </StackPanel>
         <Button x:Name="DjScratch" Content="DJ Scratch" HorizontalAlignment="Left" Margin="27,313.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click"/>
@@ -48,8 +48,30 @@
         <Button x:Name="Scratching" Content="Scratching" HorizontalAlignment="Left" Margin="26,270.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click"/>
         <Button x:Name="SharpChime" Content="Sharp Chime" HorizontalAlignment="Left" Margin="140,270.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click"/>
         <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="140,313.75,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Effect_Click" Width="105"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="151,91.667,0,0" Grid.Row="1" VerticalAlignment="Top" Click="button_Click"/>
-
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="84,46,0,0" Grid.Row="1" VerticalAlignment="Top" Click="button_Click"/>
+        
+        <StackPanel x:Name="equalizerEffectContainer">
+            
+            <StackPanel Orientation="Horizontal">
+                <StackPanel x:Name="eq1SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq1Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq1Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="50" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq1SliderLabel" Text="100Hz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+                <StackPanel x:Name="eq2SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq2Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq2Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="20" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq2SliderLabel" Text="900Hz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+                <StackPanel x:Name="eq3SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq3Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq3Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="70" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq3SliderLabel" Text="5kHz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+                <StackPanel x:Name="eq4SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq4Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq4Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="30" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq4SliderLabel" Text="12kHz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="56,41.333,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="33" Width="189"/>
     </Grid>
 
 </Page>
