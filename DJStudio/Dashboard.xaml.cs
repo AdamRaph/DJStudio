@@ -280,5 +280,6 @@ namespace DJStudio
                 HeaderPanel.Children.Add(ellipse1);
             }
         }
+
     }
 }
