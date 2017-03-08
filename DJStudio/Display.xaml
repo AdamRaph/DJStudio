@@ -24,8 +24,6 @@
      HorizontalAlignment="Center"
      Grid.Row="0">
             <!-- Slider for rotation input -->
-            <Polygon Fill="LightBlue"
-         Points="10,200,60,140,130,140,180,200" />
         </StackPanel>
         <StackPanel 
             x:Name="Bottom"
