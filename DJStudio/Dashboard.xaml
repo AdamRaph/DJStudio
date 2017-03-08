@@ -43,7 +43,7 @@
                 <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
                 <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
             </ListView>
-            <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="0,20,0,0" IsEnabled="True"/>
+            <!--Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="0,20,0,0" IsEnabled="True"/-->
             <Button x:Name="button" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             <!--Playback Controls-->
         </StackPanel>
