@@ -26,7 +26,7 @@
         <StackPanel Orientation="Vertical" 
      VerticalAlignment="Center" 
      HorizontalAlignment="Center"
-     Grid.Row="1">
+     Grid.Row="1" Height="464" Margin="0,104.667,5,10" Width="355">
             <!-- Slider for rotation input -->
             <Slider x:Name="RotationSlider"
          Width="300"
@@ -34,17 +34,18 @@
             <!-- Switch for click input -->
             <ToggleSwitch x:Name="ButtonToggle"
          HorizontalAlignment="Left"/>
-        
-        <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="98" Margin="10,103.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
-            
-            <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"  />
-            <ListViewItem Content="Daft Punk - Random Access Memories (Vanderway Edit)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
-            <ListViewItem Content="David Guetta - Play Hard ft. Ne-Yo, Akon (Official Video)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
-            <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
-            <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
-        </ListView>
-        <!--Playback Controls-->
-        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="150" Margin="0,20,0,0" IsEnabled="True"/>
+
+            <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="98" Margin="10,103.667,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
+
+                <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"  />
+                <ListViewItem Content="Daft Punk - Random Access Memories (Vanderway Edit)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
+                <ListViewItem Content="David Guetta - Play Hard ft. Ne-Yo, Akon (Official Video)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
+                <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
+                <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
+            </ListView>
+            <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="0,20,0,0" IsEnabled="True"/>
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <!--Playback Controls-->
         </StackPanel>
     </Grid>
 

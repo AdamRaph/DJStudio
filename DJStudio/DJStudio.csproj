@@ -113,6 +113,13 @@
     <Content Include="Assets\Audio\Avicii - Waiting For Love.mp3" />
     <Content Include="Assets\Audio\Daft Punk - Random Access Memories %28Vanderway Edit%29.mp3" />
     <Content Include="Assets\Audio\David Guetta - Play Hard ft. Ne-Yo, Akon %28Official Video%29.mp3" />
+    <Content Include="Assets\Audio\Effects\DJ Scratch.mp3" />
+    <Content Include="Assets\Audio\Effects\Drums.mp3" />
+    <Content Include="Assets\Audio\Effects\Metallic Pulse.mp3" />
+    <Content Include="Assets\Audio\Effects\Pop Echo.mp3" />
+    <Content Include="Assets\Audio\Effects\Scratching.mp3" />
+    <Content Include="Assets\Audio\Effects\Sharp Chime.mp3" />
+    <Content Include="Assets\Audio\Effects\Whoosh.mp3" />
     <Content Include="Assets\Audio\Eiffel 65 - I%27m Blue %28da ba dee%29 lyrics.mp3" />
     <Content Include="Assets\Audio\Flo Rida - Whistle.mp3" />
     <Content Include="Properties\Default.rd.xml" />
