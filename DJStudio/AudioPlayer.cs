@@ -93,7 +93,7 @@ namespace DJStudio
             var sound = _fileInputs[key];
             CreateEqEffect(key);
             sound.OutgoingGain = gain;
-            sound.Seek(new TimeSpan(0,1,50));
+            sound.Seek(new TimeSpan(0));
            
 
             sound.Start();

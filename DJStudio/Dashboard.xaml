@@ -82,7 +82,6 @@
                     <TextBlock x:Name="eq4SliderLabel" Text="12kHz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
                 </StackPanel>
             </StackPanel>
-        </StackPanel>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="56,41.333,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="33" Width="189"/>
     </Grid>
 
