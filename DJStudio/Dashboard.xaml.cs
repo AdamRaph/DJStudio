@@ -62,7 +62,7 @@ namespace DJStudio
         {
             var sound = _fileInputs[key];
             sound.OutgoingGain = gain;
-            sound.Seek(new TimeSpan(0,1,50));
+            sound.Seek(new TimeSpan(0));
             sound.Start();
         }
         public void Stop(string key)
@@ -258,5 +258,6 @@ namespace DJStudio
         {
            
         }
+
     }
 }

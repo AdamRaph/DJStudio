@@ -121,6 +121,7 @@
     <Content Include="Assets\Audio\Effects\Whoosh.mp3" />
     <Content Include="Assets\Audio\Eiffel 65 - I%27m Blue %28da ba dee%29 lyrics.mp3" />
     <Content Include="Assets\Audio\Flo Rida - Whistle.mp3" />
+    <Content Include="Assets\Equaliser.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
