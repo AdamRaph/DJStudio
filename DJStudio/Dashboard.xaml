@@ -8,29 +8,24 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-52,-92">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="249*"/>
+            <RowDefinition Height="422*"/>
         </Grid.RowDefinitions>
         <StackPanel x:Name="HeaderPanel" 
      Orientation="Horizontal" 
-     Grid.Row="0">
-            <TextBlock x:Name="Header"
-         Text="RadialController customization sample"
-         VerticalAlignment="Center"
-         Style="{ThemeResource HeaderTextBlockStyle}"
-         Margin="10,0,0,0" />
-        </StackPanel>
+     Grid.Row="0" Margin="0,0,0,0.333"/>
         <StackPanel Orientation="Vertical" 
      VerticalAlignment="Center" 
      HorizontalAlignment="Center"
-     Grid.Row="1" Height="464" Margin="0,104.667,5,10" Width="355">
+     Grid.Row="1" Height="464" Margin="26,150.667,31,56" Width="355" Grid.RowSpan="2">
             <!-- Slider for rotation input -->
             <Slider x:Name="RotationSlider"
          Width="300"
-         HorizontalAlignment="Left"/>
+         HorizontalAlignment="Left" />
             <!-- Switch for click input -->
             <ToggleSwitch x:Name="ButtonToggle"
          HorizontalAlignment="Left"/>
@@ -44,9 +39,17 @@
                 <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True"/>
             </ListView>
             <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="0,20,0,0" IsEnabled="True"/>
-            <Button x:Name="button" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             <!--Playback Controls-->
         </StackPanel>
+        <Button x:Name="DjScratch" Content="DJ Scratch" HorizontalAlignment="Left" Margin="27,313.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click"/>
+        <Button x:Name="Drums" Content="Drums" HorizontalAlignment="Left" Margin="266,270.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click" Width="93"/>
+        <Button x:Name="MetallicPulse" Content="Metallic Pulse" HorizontalAlignment="Left" Margin="140,360.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click" Width="105"/>
+        <Button x:Name="PopEcho" Content="Pop Echo" HorizontalAlignment="Left" Margin="26,360.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click" Width="89"/>
+        <Button x:Name="Scratching" Content="Scratching" HorizontalAlignment="Left" Margin="26,270.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click"/>
+        <Button x:Name="SharpChime" Content="Sharp Chime" HorizontalAlignment="Left" Margin="140,270.75,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click"/>
+        <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="140,313.75,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Effect_Click" Width="105"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="151,91.667,0,0" Grid.Row="1" VerticalAlignment="Top" Click="button_Click"/>
+
     </Grid>
 
 </Page>

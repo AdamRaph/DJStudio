@@ -24,14 +24,14 @@ namespace DJStudio
         public Display()
         {
             this.InitializeComponent();
-            var ellipse1 = new Ellipse
-            {
-                Fill = new SolidColorBrush(Windows.UI.Colors.SteelBlue),
-                Width = 200,
-                Height = 200
-            };
+            //var ellipse1 = new Ellipse
+            //{
+            //    Fill = new SolidColorBrush(Windows.UI.Colors.SteelBlue),
+            //    Width = 200,
+            //    Height = 200
+            //};
 
-            Top.Children.Add(ellipse1);
+            //Top.Children.Add(ellipse1);
 
            
         }
