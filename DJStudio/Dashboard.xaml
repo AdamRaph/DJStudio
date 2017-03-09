@@ -43,7 +43,7 @@
                 <ImageBrush ImageSource="Assets/Equaliser.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="500,37,507,392" IsEnabled="True" Background="White" Grid.Row="2" Foreground="White" FontSize="18" FontFamily="Segoe UI Light" FontWeight="Bold" />
+        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="1.5" Minimum="0.75" Value="1" StepFrequency="0.1" Width="325" Margin="500,37,507,392" IsEnabled="True" Background="White" Grid.Row="2" Foreground="White" FontSize="18" FontFamily="Segoe UI Light" FontWeight="Bold" />
         <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="140" Margin="650,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="630" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
             <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
             <ListViewItem Content="Daft Punk - Random Access Memories (Vanderway Edit)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
@@ -60,8 +60,8 @@
         <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="1070,265,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold" />
         <Button x:Name="button" Content="Dial Click" HorizontalAlignment="Left" Margin="1054,469,0,0" Grid.Row="2" VerticalAlignment="Top" Click="button_Click" Width="120" Foreground="Black" Background="White"/>
 
-        <Ellipse HorizontalAlignment="Left" Height="210" Margin="140,88,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White"  />
-        <Ellipse HorizontalAlignment="Right" Height="210" Margin="0,88,192,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White" />
+        <Ellipse x:Name="EllipseLeft" HorizontalAlignment="Left" Height="210" Margin="140,88,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White"  />
+        <Ellipse x:Name="EllipseRight" HorizontalAlignment="Right" Height="210" Margin="0,88,192,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White"/>
         <ContentPresenter HorizontalAlignment="Left" Height="121" Grid.RowSpan="2" VerticalAlignment="Top" Width="565" Margin="30,119,0,0" Content="Now Playing:" Foreground="White" FontSize="30"/>
             
             <StackPanel Orientation="Horizontal">
