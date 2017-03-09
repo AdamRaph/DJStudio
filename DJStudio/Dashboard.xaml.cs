@@ -63,7 +63,7 @@ namespace DJStudio
         }
 
         RadialController myController;
-        private Color[] colours = {Colors.White, Colors.Red, Colors.Aqua, Colors.Blue, Colors.BlueViolet, Colors.GreenYellow, Colors.DeepPink, Colors.DeepSkyBlue, Colors.SpringGreen};
+        private Color[] colours = {Colors.White, Colors.Red, Colors.Aqua, Colors.Blue, Colors.BlueViolet, Colors.GreenYellow, Colors.DeepPink, Colors.DeepSkyBlue, Colors.SpringGreen, Colors.Azure, Colors.MediumSlateBlue, Colors.Crimson, Colors.DarkOrange, Colors.Aquamarine, Colors.Gold, Colors.Fuchsia};
         public int cIndex = 0;
 
         public string CurrentSoundKey { get; set; }
