@@ -50,11 +50,12 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="879,477,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="296" Foreground="White" Text="Playback Speed" FontSize="25" RenderTransformOrigin="0.5,0.5">
         </TextBlock>
         <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="140" Margin="663,135,-101,0" Grid.Row="1" VerticalAlignment="Top" Width="770" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
-            <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="Daft Punk - Random Access Memories (Vanderway Edit)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="David Guetta - Play Hard ft. Ne-Yo, Akon (Official Video)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+            <ListViewItem Content="Dance Party" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+            <ListViewItem Content="Funky Fresh" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+            <ListViewItem Content="Lonely Hearts" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+            <ListViewItem Content="Oriental Drift" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+            <ListViewItem Content="Power Juice" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+            <ListViewItem Content="Time to Go" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
         </ListView>
         <Button x:Name="DjScratch" Content="DJ Scratch" HorizontalAlignment="Left" Margin="545,355,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
         <Button x:Name="Drums" Content="Drums" HorizontalAlignment="Left" Margin="740,355,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
