@@ -58,7 +58,6 @@
         <Button x:Name="Scratching" Content="Scratching" HorizontalAlignment="Left" Margin="765,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
         <Button x:Name="SharpChime" Content="Sharp Chime" HorizontalAlignment="Left" Margin="915,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
         <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="1070,265,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold" />
-        <Button x:Name="button" Content="Dial Click" HorizontalAlignment="Left" Margin="1054,469,0,0" Grid.Row="2" VerticalAlignment="Top" Click="button_Click" Width="120" Foreground="Black" Background="White"/>
 
         <Ellipse HorizontalAlignment="Left" Height="210" Margin="140,88,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White"  />
         <Ellipse HorizontalAlignment="Right" Height="210" Margin="0,88,192,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White" />

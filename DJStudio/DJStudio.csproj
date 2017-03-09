@@ -96,13 +96,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AudioPlayer.cs" />
+    <Compile Include="Models\AudioEchoEffect.cs" />
+    <Compile Include="Models\AudioPlayer.cs" />
     <Compile Include="Display.xaml.cs">
       <DependentUpon>Display.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\IMemoryBufferByteAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

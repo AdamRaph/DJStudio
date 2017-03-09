@@ -1,15 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Media.Audio;
 using Windows.Media.Render;
 using Windows.Storage;
-using Windows.UI.Xaml.Automation;
 
-namespace DJStudio
+namespace DJStudio.Models
 {
     public class AudioPlayer
     {
