@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO.IsolatedStorage;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.Streams;
@@ -62,8 +63,8 @@ namespace DJStudio
         }
 
         RadialController myController;
-
-
+        private Color[] colours = {Colors.White, Colors.Red, Colors.Aqua, Colors.Blue, Colors.BlueViolet, Colors.GreenYellow, Colors.DeepPink, Colors.DeepSkyBlue, Colors.SpringGreen, Colors.Azure, Colors.MediumSlateBlue, Colors.Crimson, Colors.DarkOrange, Colors.Aquamarine, Colors.Gold, Colors.Fuchsia};
+        public int cIndex = 0;
 
         public string CurrentSoundKey { get; set; }
         public AudioPlayer Songplayer = new AudioPlayer();
@@ -98,28 +99,31 @@ namespace DJStudio
 
 
             // Create an icon for the custom tool.
-            var icon =
-              RandomAccessStreamReference.CreateFromUri(
-                new Uri("ms-appx:///Assets/StoreLogo.png"));
-
+            var colourIcon =
+                RandomAccessStreamReference.CreateFromUri(
+                    new Uri("http://orig15.deviantart.net/c880/f/2015/155/8/e/rainbow_explosion__transparent__by_thatbluecreeper-d8w2c7r.png"));
+            var tempoIcon =
+                RandomAccessStreamReference.CreateFromUri(
+                    new Uri("https://cdn1.iconfinder.com/data/icons/agile/500/agile_velocity-512.png"));
             // Create a menu item for the custom tool.
-            var myItem =
-              RadialControllerMenuItem.CreateFromIcon("Sample", icon);
-            var myItem2 =
-              RadialControllerMenuItem.CreateFromIcon("Sample2", icon);
+            var Tempo =
+              RadialControllerMenuItem.CreateFromIcon("Tempo", tempoIcon);
+            var Colour =
+              RadialControllerMenuItem.CreateFromIcon("Colour", colourIcon);
 
 
             // Add the custom tool to the RadialController menu.
 
 
-            myController.Menu.Items.Add(myItem);
-            myController.Menu.Items.Add(myItem2);
+            myController.Menu.Items.Add(Tempo);
+            myController.Menu.Items.Add(Colour);
 
             // Declare input handlers for the RadialController.
             myController.ButtonClicked += MyController_ButtonClicked;
             myController.RotationChanged += MyController_RotationChanged;
             myController.ControlAcquired += MyController_ControlAcquired;
-
+            myController.RotationResolutionInDegrees = 10;
+            myController.UseAutomaticHapticFeedback = true;
 
         }
 
@@ -238,15 +242,19 @@ namespace DJStudio
             var s = sender.Menu.GetSelectedMenuItem();
             if (sender.Menu.GetSelectedMenuItem().DisplayText == "Colour")
             {
-                this.DialMode = DialMode = DialModeEnum.Color;
+                this.DialMode = DialModeEnum.Color;
             }
             else if (sender.Menu.GetSelectedMenuItem().DisplayText == "Tempo")
             {
-                this.DialMode = DialMode = DialModeEnum.Tempo;
+                this.DialMode = DialModeEnum.Tempo;
             }
             else if (sender.Menu.GetSelectedMenuItem().DisplayText == "Volume")
             {
-                this.DialMode = DialMode = DialModeEnum.Volume;
+                this.DialMode = DialModeEnum.Volume;
+            }
+            else
+            {
+                this.DialMode = DialModeEnum.None;
             }
         }
 
@@ -265,21 +273,50 @@ namespace DJStudio
                 case DialModeEnum.Volume:
                     Volume_RotationChanged(args);
                     break;
+               
             }
             Volume_RotationChanged(args);
         }
 
         private void Tempo_RotationChanged(RadialControllerRotationChangedEventArgs args)
         {
+            if ((playSpeedSlider.Value <= 1.5) && (playSpeedSlider.Value >= 0.75))
+            {
+                if (args.RotationDeltaInDegrees > 0)
+                {
+                    playSpeedSlider.Value += 0.1;
+                    return;
+                }
+                else if (args.RotationDeltaInDegrees < 0)
+                {
+                    playSpeedSlider.Value -= 0.1;
+                    return;
+
+                }
+            }
         }
 
         private void Colour_RotationChanged(RadialControllerRotationChangedEventArgs args)
         {
+            //lerp?
+            
+            if (args.RotationDeltaInDegrees > 0)
+            {
+                if(cIndex < colours.Length-1)
+                cIndex++;
+            }
+            if (args.RotationDeltaInDegrees < 0)
+            {
+                if(cIndex >= 1)
+                    cIndex--;
+            }
+            EllipseLeft.Fill = new SolidColorBrush(colours[cIndex]);
+            EllipseRight.Fill = EllipseLeft.Fill;
         }
 
         private void Volume_RotationChanged(RadialControllerRotationChangedEventArgs args)
         {
-            if (RotationSlider.Value + args.RotationDeltaInDegrees > 100)
+           /* if (RotationSlider.Value + args.RotationDeltaInDegrees > 100)
             {
                 RotationSlider.Value = 100;
                 return;
@@ -290,7 +327,7 @@ namespace DJStudio
                 return;
             }
 
-            RotationSlider.Value += args.RotationDeltaInDegrees;
+            RotationSlider.Value += args.RotationDeltaInDegrees;*/
         }
 
         // Handler for click input from the RadialController.
@@ -410,5 +447,8 @@ namespace DJStudio
 
        
 
+        private void ColourController_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+                    }
     }
 }
