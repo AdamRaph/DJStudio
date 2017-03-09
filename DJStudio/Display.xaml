@@ -9,7 +9,7 @@
 
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="Black"   >
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -18,22 +18,19 @@
 
 
         <StackPanel 
-            x:Name="Top"
+            x:Name="Main"
             Orientation="Vertical" 
      VerticalAlignment="Center" 
      HorizontalAlignment="Center"
-     Grid.Row="0">
+     Grid.Row="0" Height="700" Margin="0,0,37,20" Grid.RowSpan="2" Width="1243">
             <!-- Slider for rotation input -->
-        </StackPanel>
-        <StackPanel 
-            x:Name="Bottom"
-            Orientation="Vertical" 
-     VerticalAlignment="Center" 
-     HorizontalAlignment="Center"
-     Grid.Row="1">
-            <!-- Slider for rotation input -->
+            <ContentPresenter HorizontalAlignment="Center" Height="609" Grid.RowSpan="2" VerticalAlignment="Top" Width="1233" Margin="0,119,10,0" Foreground="White" FontSize="30">
+                <Canvas x:Name="TheCanvas" HorizontalAlignment="Center" Height="715" Margin="-17,-123,-25,0" VerticalAlignment="Top" Width="1275"/>
+
+            </ContentPresenter>
 
         </StackPanel>
+
     </Grid>
 
 </Page>

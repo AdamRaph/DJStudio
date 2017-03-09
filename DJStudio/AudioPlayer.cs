@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Numerics;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.Media.Audio;
 using Windows.Media.Render;
 using Windows.Storage;
+using Windows.UI.Xaml.Automation;
 
 namespace DJStudio
 {
@@ -14,6 +17,7 @@ namespace DJStudio
         private AudioGraph _graph;
         private readonly Dictionary<string, AudioFileInputNode> _fileInputs = new Dictionary<string, AudioFileInputNode>();
         private AudioDeviceOutputNode _deviceOutput;
+        public AudioFrameOutputNode FrameOutput;
 
         public AudioPlayer()
         {
@@ -48,7 +52,7 @@ namespace DJStudio
             {
                 await CreateAudioGraph();
             }
-
+            
             var fileInputResult = await _graph.CreateFileInputNodeAsync(file);
 
             if (!_fileInputs.ContainsKey(file.Name))
@@ -88,15 +92,29 @@ namespace DJStudio
            
         }
 
+      
+
         public void Play(string key, double gain)
         {
             var sound = _fileInputs[key];
             CreateEqEffect(key);
+            try
+            {
+                sound.RemoveOutgoingConnection(FrameOutput);
+            }
+            catch (Exception)
+            {
+                
+               //kill exception here
+            }
+           
+            sound.AddOutgoingConnection(FrameOutput);
             sound.OutgoingGain = gain;
             sound.Seek(new TimeSpan(0));
            
 
             sound.Start();
+
         }
         public void Stop(string key)
         {
@@ -115,6 +133,10 @@ namespace DJStudio
             _graph = result.Graph;
             var deviceOutputNodeResult = await _graph.CreateDeviceOutputNodeAsync();
             _deviceOutput = deviceOutputNodeResult.DeviceOutputNode;
+
+            FrameOutput =  _graph.CreateFrameOutputNode();
+
+           
             _graph.ResetAllNodes();
             _graph.Start();
         }
