@@ -46,8 +46,8 @@
                 <ImageBrush ImageSource="Assets/Equaliser.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Margin="889,417,61,170" IsEnabled="True" Background="White" Grid.Row="2" Foreground="White" FontSize="20" FontFamily="Segoe UI Light" FontWeight="Bold" />
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="889,469,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="296" Foreground="White" Text="Playback Speed" FontSize="25" RenderTransformOrigin="0.5,0.5">
+        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="1.5" Minimum="0.7" Value="1" StepFrequency="0.1" Margin="865,417,85,170" IsEnabled="True" Background="White" Grid.Row="2" Foreground="White" FontSize="20" FontFamily="Segoe UI Light" FontWeight="Bold" />
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="879,477,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="296" Foreground="White" Text="Playback Speed" FontSize="25" RenderTransformOrigin="0.5,0.5">
         </TextBlock>
         <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="140" Margin="663,135,-101,0" Grid.Row="1" VerticalAlignment="Top" Width="770" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
             <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
@@ -64,8 +64,8 @@
         <Button x:Name="SharpChime" Content="Sharp Chime" HorizontalAlignment="Left" Margin="841,0,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
         <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="1031,0,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
         <Button x:Name="button" Content="Dial Click" HorizontalAlignment="Left" Margin="1795,688,0,0" Grid.Row="2" VerticalAlignment="Top" Click="button_Click" Width="175" Foreground="Black" Background="White" FontSize="20"/>
-        <Ellipse HorizontalAlignment="Left" Height="300" Margin="118,135,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="White" />
-        <Ellipse HorizontalAlignment="Right" Height="300" Margin="0,135,139,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="White" />
+        <Ellipse x:Name="EllipseLeft" Height="300" Margin="145,135,887,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="White" />
+        <Ellipse x:Name="EllipseRight" HorizontalAlignment="Right" Height="300" Margin="0,135,145,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="White" />
         <ContentPresenter HorizontalAlignment="Left" Height="121" VerticalAlignment="Top" Width="840" Margin="24,141,0,0" Content="Now Playing:" Foreground="White" FontSize="30" Grid.Row="1"/>
 
         <StackPanel Orientation="Horizontal" Margin="61,307,898,593" Grid.Row="1" Grid.RowSpan="2">
