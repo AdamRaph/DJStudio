@@ -46,47 +46,46 @@
                 <ImageBrush ImageSource="Assets/Equaliser.png"/>
             </Rectangle.Fill>
         </Rectangle>
-        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Margin="889,417,61,170" IsEnabled="True" Background="White" Grid.Row="2" Foreground="White" FontSize="20" FontFamily="Segoe UI Light" FontWeight="Bold" />
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="889,469,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Height="68" Width="296" Foreground="White" Text="Playback Speed" FontSize="25" RenderTransformOrigin="0.5,0.5">
-        </TextBlock>
-        <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="140" Margin="663,135,-101,0" Grid.Row="1" VerticalAlignment="Top" Width="770" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
-            <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="Daft Punk - Random Access Memories (Vanderway Edit)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="David Guetta - Play Hard ft. Ne-Yo, Akon (Official Video)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
-            <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontFamily="Segoe UI Light" FontSize="25" />
+        <Slider x:Name="playSpeedSlider" Header="Playback Speed" ValueChanged="PlaySpeedSlider_ValueChanged" Maximum="3" Minimum="0.5" Value="1" StepFrequency="0.1" Width="325" Margin="500,37,507,392" IsEnabled="True" Background="White" Grid.Row="2" Foreground="White" FontSize="18" FontFamily="Segoe UI Light" FontWeight="Bold" />
+        <ListView x:Name="songslistView" HorizontalAlignment="Left" Height="140" Margin="650,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="630" SelectionChanged="songslistView_SelectionChanged" AllowDrop="True">
+            <ListViewItem Content="Avicii - Waiting For Love" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
+            <ListViewItem Content="Daft Punk - Random Access Memories (Vanderway Edit)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
+            <ListViewItem Content="David Guetta - Play Hard ft. Ne-Yo, Akon (Official Video)" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
+            <ListViewItem Content="Eiffel 65 - I'm Blue (da ba dee) lyrics" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
+            <ListViewItem Content="Flo Rida - Whistle" IsDoubleTapEnabled="True" IsHoldingEnabled="True" IsRightTapEnabled="True" Foreground="White" FontWeight="Bold" FontFamily="Segoe UI Light" FontSize="18" />
         </ListView>
-        <Button x:Name="DjScratch" Content="DJ Scratch" HorizontalAlignment="Left" Margin="545,355,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
-        <Button x:Name="Drums" Content="Drums" HorizontalAlignment="Left" Margin="740,355,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
-        <Button x:Name="MetallicPulse" Content="Metallic Pulse" HorizontalAlignment="Left" Margin="935,355,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
-        <Button x:Name="PopEcho" Content="Pop Echo" HorizontalAlignment="Left" Margin="1130,355,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light"  FontSize="20"/>
-        <Button x:Name="Scratching" Content="Scratching" HorizontalAlignment="Left" Margin="646,0,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light"  FontSize="20"/>
-        <Button x:Name="SharpChime" Content="Sharp Chime" HorizontalAlignment="Left" Margin="841,0,0,0" Grid.Row="2" VerticalAlignment="Top"  Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
-        <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="1031,0,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Effect_Click" Width="175" Background="White" FontFamily="Segoe UI Light" FontSize="20"/>
-        <Button x:Name="button" Content="Dial Click" HorizontalAlignment="Left" Margin="1795,688,0,0" Grid.Row="2" VerticalAlignment="Top" Click="button_Click" Width="175" Foreground="Black" Background="White" FontSize="20"/>
-            <Ellipse HorizontalAlignment="Left" Height="300" Margin="118,135,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="White" />
-        <Ellipse HorizontalAlignment="Right" Height="300" Margin="0,135,139,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="White" />
-        <ContentPresenter HorizontalAlignment="Left" Height="121" VerticalAlignment="Top" Width="840" Margin="24,141,0,0" Content="Now Playing:" Foreground="White" FontSize="30" Grid.Row="1"/>
+        <Button x:Name="DjScratch" Content="DJ Scratch" HorizontalAlignment="Left" Margin="160,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold" />
+        <Button x:Name="Drums" Content="Drums" HorizontalAlignment="Left" Margin="305,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
+        <Button x:Name="MetallicPulse" Content="Metallic Pulse" HorizontalAlignment="Left" Margin="455,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
+        <Button x:Name="PopEcho" Content="Pop Echo" HorizontalAlignment="Left" Margin="610,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
+        <Button x:Name="Scratching" Content="Scratching" HorizontalAlignment="Left" Margin="765,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
+        <Button x:Name="SharpChime" Content="Sharp Chime" HorizontalAlignment="Left" Margin="915,265,0,0" Grid.Row="1" VerticalAlignment="Top"  Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold"/>
+        <Button x:Name="Whoosh" Content="Whoosh" HorizontalAlignment="Left" Margin="1070,265,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Effect_Click" Width="120" Background="White" FontFamily="Segoe UI Light" FontWeight="Bold" />
+        <Button x:Name="button" Content="Dial Click" HorizontalAlignment="Left" Margin="1054,469,0,0" Grid.Row="2" VerticalAlignment="Top" Click="button_Click" Width="120" Foreground="Black" Background="White"/>
 
-        <StackPanel Orientation="Horizontal" Margin="61,307,898,593" Grid.Row="1" Grid.RowSpan="2">
-            <StackPanel x:Name="eq1SliderContainer" Orientation="Vertical">
-                <Slider x:Name="eq1Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq1Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="50" Height="150" IsEnabled="True" Margin="20,5" Foreground="White" Background="#66FFFFFF"/>
-                <TextBlock x:Name="eq1SliderLabel" Text="100Hz" HorizontalAlignment="Center" Foreground="White" FontSize="25"/>
+        <Ellipse HorizontalAlignment="Left" Height="210" Margin="140,88,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White"  />
+        <Ellipse HorizontalAlignment="Right" Height="210" Margin="0,88,192,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="205" Fill="White" />
+        <ContentPresenter HorizontalAlignment="Left" Height="121" Grid.RowSpan="2" VerticalAlignment="Top" Width="565" Margin="30,119,0,0" Content="Now Playing:" Foreground="White" FontSize="30"/>
+            
+            <StackPanel Orientation="Horizontal">
+                <StackPanel x:Name="eq1SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq1Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq1Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="50" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq1SliderLabel" Text="100Hz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+                <StackPanel x:Name="eq2SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq2Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq2Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="20" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq2SliderLabel" Text="900Hz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+                <StackPanel x:Name="eq3SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq3Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq3Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="70" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq3SliderLabel" Text="5kHz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
+                <StackPanel x:Name="eq4SliderContainer" Orientation="Vertical">
+                    <Slider x:Name="eq4Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq4Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="30" Height="150" IsEnabled="True" Margin="20,5"/>
+                    <TextBlock x:Name="eq4SliderLabel" Text="12kHz" HorizontalAlignment="Center" Foreground="#4A4A4A"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="eq2SliderContainer" Orientation="Vertical">
-                <Slider x:Name="eq2Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq2Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="20" Height="150" IsEnabled="True" Margin="20,5" Foreground="White" Background="#66FFFFFF"/>
-                <TextBlock x:Name="eq2SliderLabel" Text="900Hz" HorizontalAlignment="Center" Foreground="White" FontSize="25"/>
-            </StackPanel>
-            <StackPanel x:Name="eq3SliderContainer" Orientation="Vertical">
-                <Slider x:Name="eq3Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq3Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="70" Height="150" IsEnabled="True" Margin="20,5" Foreground="White" Background="#66FFFFFF"/>
-                <TextBlock x:Name="eq3SliderLabel" Text="5kHz" HorizontalAlignment="Center" Foreground="White" FontSize="25"/>
-            </StackPanel>
-            <StackPanel x:Name="eq4SliderContainer" Orientation="Vertical">
-                <Slider x:Name="eq4Slider" Orientation="Vertical" HorizontalAlignment="Center" ValueChanged="Eq4Slider_ValueChanged" Maximum="100" Minimum="0" SmallChange="5" Value="30" Height="150" IsEnabled="True" Margin="20,5" Foreground="White" Background="#66FFFFFF"/>
-                <TextBlock x:Name="eq4SliderLabel" Text="12kHz" HorizontalAlignment="Center" Foreground="White" FontSize="25"/>
-            </StackPanel>
-        </StackPanel>
-
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="56,41.333,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="33" Width="189"/>
     </Grid>
 
 </Page>
