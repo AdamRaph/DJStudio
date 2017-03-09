@@ -337,5 +337,8 @@ namespace DJStudio
             }
         }
 
+        private void ColourController_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+                    }
     }
 }
